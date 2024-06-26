@@ -1,0 +1,29 @@
+<div class="first">
+<h1 class="text-center">Explore {{selectedDistrict.title}}</h1>
+<div class="container main mt-3">
+    <img [src]="selectedDistrict.imageurl" alt="Snow" class="responsive-img">
+    <div class="centered text-with-shadow">
+        <h3>{{selectedDistrict.title}}</h3>
+        <p>{{selectedDistrict.description}}</p>
+    </div>
+</div>
+</div>
+<div class="container mt-2">
+    <p class="text-dark text-justify">{{selectedDistrict.details}}</p>
+</div>
+<h2 class=" text-center text-dark mt-3">Top Tourist Destinations</h2>
+<div class="container mt-3">
+<div class="row">
+    @for(item of selectedDistrict.tourist_places; track item.name){
+    <div class="col-md-6 mb-5">
+        <div class="card">
+            <img [src]="item.image_url" class="card-img-top" alt="{{item.name }}">
+            <div class="card-body ">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+            </div>
+          </div>  
+    </div>
+}
+</div>
+</div>

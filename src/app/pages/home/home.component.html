@@ -1,0 +1,32 @@
+<section>
+<div class="container-fluid mt-3 first">
+    <div class="row">
+        <div class="col-md-8 ">
+            <!-- <img [src]="imageURL" alt="Kerala"> -->
+             <app-carousel></app-carousel>
+        </div>
+        <div class="p-3 col-md-4 text-center ">
+            <h1>{{first.title}}</h1>
+            <p>{{first.description}}</p>
+        </div>
+    </div>
+</div>
+</section>
+<section>
+    <div class="container-fluid mt-3 scroll-container">
+        <h3 appError>Our Specialities</h3>
+        <div class="scrollable">
+        @for (item of specialities; track item.id){
+            <div class="col">
+                <app-card [src]="item.imageurl"
+                [title]="item.title"
+                [text]="item.description">
+            </app-card>
+            </div> 
+        }
+        </div>
+       </div>
+</section>
+<section>
+    <app-district-cards></app-district-cards>
+</section>

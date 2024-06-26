@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+        <img src="images\kerala-tourism-logo.png" alt="logo" class="img-logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/districts-list" role="button" data-bs-toggle="dropdown">Districts</a>
+            <ul class="dropdown-menu">
+                @for (item of districts; track item.id){
+                    <li><a class="dropdown-item" routerLink="/districts">{{ item.title }}</a></li>
+                }
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/auth">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
