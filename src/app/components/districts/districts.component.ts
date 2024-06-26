@@ -20,12 +20,8 @@ export class DistrictsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      console.log(+params['id']);
-      
+    this.route.params.subscribe(params => { 
       this.districtId = +params['id'];
-      console.log(this.districtId);
-      
       this.fetchDistricts(this.districtId);
     });
   }
