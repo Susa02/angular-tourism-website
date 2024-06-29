@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
 
   async fetchDistricts() {
     try {
-      const response = await fetch('https://angular-tourism-website.vercel.app//districts');
+      const response = await fetch('http://localhost:3000/districts');
       this.districts = await response.json();
     } catch (error) {
       console.error('Error fetching districts:', error);
