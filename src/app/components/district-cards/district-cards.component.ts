@@ -22,7 +22,7 @@ export class DistrictCardsComponent implements OnInit {
   }
   
   fetchDistricts() {
-    fetch('http://localhost:3000/districts')
+    fetch('https://angular-tourism-website.vercel.app/districts')
       .then(response => response.json())
       .then(data => {
         this.districts = data;
