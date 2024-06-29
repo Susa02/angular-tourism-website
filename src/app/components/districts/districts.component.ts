@@ -29,7 +29,7 @@ export class DistrictsComponent implements OnInit {
   async fetchDistricts(id: number) {
     console.log(id);
     
-    await fetch(`http://localhost:3000/districts`)
+    await fetch(`https://angular-tourism-website.vercel.app/districts`)
       .then(response => response.json())
       .then(data => {
         this.districts = data;
